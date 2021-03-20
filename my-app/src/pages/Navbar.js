@@ -1,12 +1,14 @@
 import React from 'react'
 //import * as ReactBootStrap from 'react-bootstrap'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import '../css/Navbar.css';
+
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+// import Navbar from 'react-bootstrap/Navbar'
+// import Nav from 'react-bootstrap/Nav';
+// import NavDropDown from 'react-bootstrap/NavDropdown';
 
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" bg="success">
+    <Navbar collapseOnSelect expand="lg" variant="dark" className="color-nav">
       <Navbar.Brand href='/'>ATRIUM</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
@@ -14,7 +16,17 @@ function NavBar() {
           <Nav.Link href="/classes">Classes</Nav.Link>
           <Nav.Link href="/clubs">Clubs</Nav.Link>
           <Nav.Link href="/interests">Interests</Nav.Link>
-          <Nav.Link href="/profile">Profile</Nav.Link>
+          <div class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link" href="#" id="collasible-nav-dropdown" role="button" aria-haspopup=
+            "true" aria-expanded="false">
+              <img src={'./havish.jpeg'} width="40" height="40" class="rounded-circle"/>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="collasible-nav-dropdown" show>
+              <a class="dropdown-item" href="/">Edit Profile</a>
+              <a class="dropdown-item" href="/">Log Out</a>
+            </div>
+          </div>
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>
