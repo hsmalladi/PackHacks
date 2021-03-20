@@ -1,25 +1,25 @@
 import React from 'react'
 //import * as ReactBootStrap from 'react-bootstrap'
 
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 // import Navbar from 'react-bootstrap/Navbar'
 // import Nav from 'react-bootstrap/Nav';
 // import NavDropDown from 'react-bootstrap/NavDropdown';
 
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" className="color-nav">
-      <Navbar.Brand href='/'>ATRIUM</Navbar.Brand>
+    <Navbar collapseOnSelect expand="lg" variant="dark" className="color-nav" style={{ fontFamily: "PingFang SC" }}>
+      <Navbar.Brand href='/' style={{ fontWeight: "bold", fontSize: "20px" }}>atrium</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="/classes">Classes</Nav.Link>
-          <Nav.Link href="/clubs">Clubs</Nav.Link>
-          <Nav.Link href="/interests">Interests</Nav.Link>
+          <Nav.Link href="/classes" style={{ fontWeight: "bold", fontSize: "20px" }}>Classes</Nav.Link>
+          <Nav.Link href="/clubs" style={{ fontWeight: "bold", fontSize: "20px" }}>Clubs</Nav.Link>
+          <Nav.Link href="/interests" style={{ fontWeight: "bold", fontSize: "20px" }}>Interests</Nav.Link>
           <div class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" href="#" id="collasible-nav-dropdown" role="button" aria-haspopup=
-            "true" aria-expanded="false">
-              <img src={'./havish.jpeg'} width="40" height="40" class="rounded-circle"/>
+              "true" aria-expanded="false">
+              <img src={'./havish.jpeg'} width="40" height="40" class="rounded-circle" />
             </a>
             <div class="dropdown-menu" aria-labelledby="collasible-nav-dropdown" show>
               <a class="dropdown-item" href="/">Edit Profile</a>
