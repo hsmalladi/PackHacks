@@ -1,4 +1,5 @@
 import React from 'react'
+import image from "../images/logo.png";
 //import * as ReactBootStrap from 'react-bootstrap'
 
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
@@ -9,7 +10,9 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="color-nav" style={{ fontFamily: "PingFang SC" }}>
-      <Navbar.Brand href='/' style={{ fontWeight: "bold", fontSize: "20px" }}>atrium</Navbar.Brand>
+      <Navbar.Brand href='/'>
+        {/*<img src={image} alt="logo" />*/}
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
