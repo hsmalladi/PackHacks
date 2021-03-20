@@ -5,6 +5,8 @@ import "./css/HomePage.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './css/Navbar.css';
+import NavBar from "./pages/Navbar";
 
 function App() {
   return (
