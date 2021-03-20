@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import styles from "../css/LoginPage.css";
 
 const LoginPage = () => {
     const history = useHistory();
     const navigateTo = () => {
+        // delete this 
+        history.push('/home');
         if (email === "havish.malladi@duke.edu" && password === "hm") {
             history.push('/home');
         }
@@ -32,35 +35,36 @@ const LoginPage = () => {
     }*/
 
     return (
-        <div className="container">
-            <div className="box">
-                <div style={{ marginTop: "10px" }}>Login page</div>
-                <div>
-                    <input
-                        type="text"
-                        value={email}
-                        placeholder="email"
-                        style={{ margin: "10px 0" }}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
+        <div class="container">
+            <div class="box" style={{ width: "70vh", height: "50vh", margin: "25vh auto" }}>
+                <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center pt-6 pb-6">
+                    <h4 style={{ marginTop: "-20px" }}>Login page</h4>
+                    <div class="mt-6">
+                        <input
+                            type="text"
+                            value={email}
+                            placeholder="Email"
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div class="mt-4">
+                        <input
+                            type="text"
+                            value={password}
+                            placeholder="Password"
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div
+                        class={`button ${styles.button_custom}`}
+                        style={{
+                            backgroundColor: "#25eb83", marginTop: "80px", width: "200px"
+                        }}
+                        onClick={navigateTo}
+                    >
+                        Login
+                    </div>
                 </div>
-                <div>
-                    <input
-                        type="text"
-                        value={password}
-                        placeholder="password"
-                        style={{ margin: "10px 0" }}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <div>
-                    {errorMessage ? (
-                        <div>{errorMessage}</div>
-                    ) : (
-                        <div />
-                    )}
-                </div>
-                <button style={{ margin: "10px 0" }} onClick={navigateTo}>Login</button>
             </div>
         </div>
     );
