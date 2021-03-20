@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 const LoginPage = () => {
     const history = useHistory();
     const navigateTo = () => {
-        if (email === "havishmalladi@gmail.com" && password === "hm") {
+        if (email === "havish.malladi@duke.edu" && password === "hm") {
             history.push('/home');
         }
         else if (email !== "havishmalladi@gmail.com") {
@@ -32,32 +32,36 @@ const LoginPage = () => {
     }*/
 
     return (
-        <div>
-            <div>Login page</div>
-            <div>
-                <input
-                    type="text"
-                    value={email}
-                    placeholder="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                />
+        <div className="container">
+            <div className="box">
+                <div style={{ marginTop: "10px" }}>Login page</div>
+                <div>
+                    <input
+                        type="text"
+                        value={email}
+                        placeholder="email"
+                        style={{ margin: "10px 0" }}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        value={password}
+                        placeholder="password"
+                        style={{ margin: "10px 0" }}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+                <div>
+                    {errorMessage ? (
+                        <div>{errorMessage}</div>
+                    ) : (
+                        <div />
+                    )}
+                </div>
+                <button style={{ margin: "10px 0" }} onClick={navigateTo}>Login</button>
             </div>
-            <div>
-                <input
-                    type="text"
-                    value={password}
-                    placeholder="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-            </div>
-            <div>
-                {errorMessage ? (
-                    <div>{errorMessage}</div>
-                ) : (
-                    <div />
-                )}
-            </div>
-            <button onClick={navigateTo}>Login</button>
         </div>
     );
 }
