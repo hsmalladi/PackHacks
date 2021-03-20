@@ -8,24 +8,24 @@ import "../css/HomePage.css"
 
 const HomePage = () => {
     return (
-      <>
-      <Navbar />
+        <>
+            <Navbar />
 
-      <div className="bg">
-      </div>
+            <div className="bg">
+            </div>
 
 
-      <div class="center">
-      <div class="has-text-white">
-      <div class="is-size-1">
-          <ReactTypingEffect
-                staticText="Connect with others through"  text={["classes.", "clubs.", "interests."]} eraseDelay="1000" typingDelay="1000"
-            />
+            <div class="center">
+                <div class="has-text-white">
+                    <div class="is-size-2">
+                        <ReactTypingEffect
+                            staticText="Connect with others through" text={["classes", "clubs", "interests"]} eraseDelay="1000" typingDelay="1000"
+                        />
 
-        </div>
-        </div>
-        </div>
-      </>
+                    </div>
+                </div>
+            </div>
+        </>
 
 
     );
