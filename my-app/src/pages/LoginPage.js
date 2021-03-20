@@ -1,66 +1,76 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import styles from "../css/LoginPage.css";
 
 const LoginPage = () => {
     const history = useHistory();
-    const navigateTo = () => {
-        if (email === "havish.malladi@duke.edu" && password === "hm") {
-            history.push('/home');
-        }
-        else if (email !== "havishmalladi@gmail.com") {
-            console.log("There is no account under this email");
-        }
-        else if (email === "havishmalladi@gmail.com" && password !== "hm") {
-            console.log("Wrong password");
-        }
-    }
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
 
-    {/*Check if user has an account*/ }
-    /*function formError() {
-        var re = /\S+@\S+\.\S+/;
-        if (email.length == 0 || !re.test(email)) {
-            return "Not a valid email!";
+    function handleClick() {
+        if (formError()) {
+            setErrorMessage(formError);
+            console.log("formError");
+        } else {
+            console.log("else");
+            //log in
+            history.push('/home');
         }
-        if (password.length == 0) {
-            return "no password";
+    }
+
+    function formError() {
+        if (email !== "havish.malladi@duke.edu") {
+            return "Incorrect email";
+        }
+        if (email === "havish.malladi@duke.edu" && password !== "havishmalladi") {
+            return "Incorrect password";
         }
         setErrorMessage(null);
         return null;
-    }*/
+    }
 
     return (
-        <div className="container">
-            <div className="box">
-                <div style={{ marginTop: "10px" }}>Login page</div>
-                <div>
-                    <input
-                        type="text"
-                        value={email}
-                        placeholder="email"
-                        style={{ margin: "10px 0" }}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
+        <div class="container" style={{ fontFamily: "PingFang SC" }}>
+            <div class="box" style={{ width: "70vh", height: "55vh", margin: "20vh auto" }}>
+                <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center pt-6 pb-6">
+                    <h4 class="has-text-weight-bold is-size-3" style={{ marginTop: "-20px", color: "#2FBC6A" }}>Log in to atrium</h4>
+                    <div class="level mt-4">
+                        <input
+                            type="text"
+                            value={email}
+                            placeholder="Email"
+                            style={{ width: "300px" }}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div class="level mt-2">
+                        <input
+                            type="password"
+                            value={password}
+                            placeholder="Password"
+                            style={{ width: "300px" }}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div className="message is-danger mb-4 has-text-centered">
+                        {errorMessage ? (
+                            <div className="message-body pt-1" style={{ height: "15px", width: "250px" }}>{errorMessage}</div>
+                        ) : (
+                            <div style={{ margin: "24px auto" }} />
+                        )}
+                    </div>
+                    <div
+                        class={`button ${styles.button_custom} has-text-white has-text-weight-semibold`}
+                        style={{
+                            backgroundColor: "#2FBC6A", width: "300px"
+                        }}
+                        onClick={() => handleClick()}
+                    >
+                        Login
+                    </div>
+                    {/*<Link to="/insert/your/path/here" className="btn btn-primary">hello</Link>*/}
                 </div>
-                <div>
-                    <input
-                        type="text"
-                        value={password}
-                        placeholder="password"
-                        style={{ margin: "10px 0" }}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <div>
-                    {errorMessage ? (
-                        <div>{errorMessage}</div>
-                    ) : (
-                        <div />
-                    )}
-                </div>
-                <button style={{ margin: "10px 0" }} onClick={navigateTo}>Login</button>
             </div>
         </div>
     );

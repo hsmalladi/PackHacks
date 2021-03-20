@@ -1,0 +1,11 @@
+.button_custom {
+    color: #25eb83;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
