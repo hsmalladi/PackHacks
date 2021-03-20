@@ -31,10 +31,10 @@ const LoginPage = () => {
     }
 
     return (
-        <div class="container" style={{ fontFamily: "Josefin Sans" }}>
+        <div class="container" style={{ fontFamily: "PingFang SC" }}>
             <div class="box" style={{ width: "70vh", height: "55vh", margin: "20vh auto" }}>
                 <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center pt-6 pb-6">
-                    <h4 class="has-text-weight-bold is-size-3" style={{ marginTop: "-20px", color: "#108943" }}>Log in to atrium</h4>
+                    <h4 class="has-text-weight-bold is-size-3" style={{ marginTop: "-20px", color: "#2FBC6A" }}>Log in to atrium</h4>
                     <div class="level mt-4">
                         <input
                             type="text"
@@ -61,9 +61,9 @@ const LoginPage = () => {
                         )}
                     </div>
                     <div
-                        class={`button ${styles.button_custom}`}
+                        class={`button ${styles.button_custom} has-text-white has-text-weight-semibold`}
                         style={{
-                            backgroundColor: "#25eb83", width: "300px"
+                            backgroundColor: "#2FBC6A", width: "300px"
                         }}
                         onClick={() => handleClick()}
                     >
