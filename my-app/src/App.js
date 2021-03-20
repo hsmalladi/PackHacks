@@ -3,6 +3,7 @@ import LoginPage from "./pages/LoginPage";
 import "./App.sass";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import NavBar from "./pages/Navbar";
 
 function App() {
   return (
