@@ -6,7 +6,7 @@ import axios from '../../node_modules/axios';
 var isDone = false;
 
 function Classes() {
-    const classArray = ["CS230", "STA199"];
+    //const classArray = ["CS230", "STA199"];
     const [addClass, setAddClass] = useState([]);
 
     if (!isDone) {
@@ -34,7 +34,7 @@ function Classes() {
             >
                 <h1>My Classes</h1>
                 <div class="level mt-6" style={{ width: "100%" }}>
-                    {classArray.map(course =>
+                    {addClass.map(course =>
                         <div class="level-item has-text-centered" style={{ margin: "auto" }}>
                             <ClassBlock courseName={course} />
                         </div>
