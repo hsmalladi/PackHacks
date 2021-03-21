@@ -6,7 +6,6 @@ import axios from '../../node_modules/axios';
 var isDone = false;
 
 function Classes() {
-    //const classArray = ["CS230", "STA199"];
     const [addClass, setAddClass] = useState([]);
 
     if (!isDone) {
