@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "../css/LoginPage.css";
 import { Link } from "react-router-dom";
+import image from "../images/greenlogo.png";
 
 const LoginPage = () => {
     const history = useHistory();
@@ -33,7 +34,8 @@ const LoginPage = () => {
 
     return (
         <div class="container" style={{ fontFamily: "PingFang SC" }}>
-            <div class="box" style={{ width: "70vh", height: "55vh", margin: "20vh auto" }}>
+            <img src={image} alt="logo" />
+            <div class="box" style={{ width: "70vh", height: "55vh", margin: "auto" }}>
                 <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center pt-6 pb-6">
                     <h4 class="has-text-weight-bold is-size-3" style={{ marginTop: "-20px", color: "#2FBC6A" }}>Log in to atrium</h4>
                     <div class="level mt-4">

@@ -1,8 +1,9 @@
 import React from 'react'
-import image from "../images/logo.png";
+import image from "../images/greenlogo.png";
+import havish from '../images/havish.jpeg';
 //import * as ReactBootStrap from 'react-bootstrap'
 
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 // import Navbar from 'react-bootstrap/Navbar'
 // import Nav from 'react-bootstrap/Nav';
 // import NavDropDown from 'react-bootstrap/NavDropdown';
@@ -10,26 +11,29 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="color-nav" style={{ fontFamily: "PingFang SC" }}>
-      <Navbar.Brand href='/'>
-        {/*<img src={image} alt="logo" />*/}
-      </Navbar.Brand>
+      <Navbar.Brand href='/'>atrium</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link href="/classes" style={{ fontWeight: "bold", fontSize: "20px" }}>Classes</Nav.Link>
           <Nav.Link href="/clubs" style={{ fontWeight: "bold", fontSize: "20px" }}>Clubs</Nav.Link>
           <Nav.Link href="/interests" style={{ fontWeight: "bold", fontSize: "20px" }}>Interests</Nav.Link>
-          <div class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link" href="#" id="collasible-nav-dropdown" role="button" aria-haspopup=
-              "true" aria-expanded="false">
-              <img src={'./havish.jpeg'} width="40" height="40" class="rounded-circle" />
-            </a>
-            <div class="dropdown-menu" aria-labelledby="collasible-nav-dropdown" show>
-              <a class="dropdown-item" href="/">Edit Profile</a>
-              <a class="dropdown-item" href="/">Log Out</a>
-            </div>
-          </div>
 
+          {/*<a class="dropdown-toggle nav-link" href="/home#" id="dropdown-basic" role="button" aria-haspopup=
+              "true" aria-expanded="false">
+              <img src={havish} width="40" height="40" class="rounded-circle" />
+            </a>*/}
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic" role="button" aria-haspopup=
+              "true" aria-expanded="false">
+              <img src={havish} width="40" height="40" class="rounded-circle" />
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu align="right">
+              <Dropdown.Item href="/profile">Edit Profile</Dropdown.Item>
+              <Dropdown.Item href="/">Log Out</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
