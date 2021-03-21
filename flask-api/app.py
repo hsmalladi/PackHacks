@@ -28,4 +28,4 @@ def getclasses():
     return jsonify(list(classes))
 
 
-app.run()
+app.run(port='3000')
