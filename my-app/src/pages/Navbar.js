@@ -19,7 +19,8 @@ function NavBar() {
         <Nav className="ml-auto">
           <Nav.Link href="/classes" style={{ fontWeight: "bold", fontSize: "22px" }}>Classes</Nav.Link>
           <Nav.Link href="/clubs" style={{ fontWeight: "bold", fontSize: "22px" }}>Clubs</Nav.Link>
-          <Nav.Link href="/interests" style={{ fontWeight: "bold", fontSize: "22px", marginRight: "15px" }}>Interests</Nav.Link>
+          <Nav.Link href="/interests" style={{ fontWeight: "bold", fontSize: "22px"}}>Interests</Nav.Link>
+          <Nav.Link href="/AboutUs" style={{ fontWeight: "bold", fontSize: "22px", marginRight: "15px"}}>About Us</Nav.Link>
           <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic" role="button" aria-haspopup=
               "true" aria-expanded="false">
