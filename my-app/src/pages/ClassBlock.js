@@ -18,9 +18,9 @@ function ClassBlock(props) {
             face: "https://www.facebook.com/harry.wang.5454",
             email: "hsw20@duke.edu"
         }, 
-        {"Shawn Lee"}, 
-        {"Nirvan Silswal"}, 
-        {"Bald Ma"}
+        {name:"Shawn Lee"}, 
+        {name:"Nirvan Silswal"}, 
+        {name:"Bald Ma"}
     ];
     return(
         <div>
