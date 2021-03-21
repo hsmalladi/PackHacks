@@ -28,6 +28,7 @@ function NavBar() {
 
             <Dropdown.Menu align="right">
               <Dropdown.Item href="/profile">Edit Profile</Dropdown.Item>
+              <Dropdown.Item href="/settings">Account Settings</Dropdown.Item>
               <Dropdown.Item href="/">Log Out</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
