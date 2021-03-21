@@ -5,7 +5,7 @@ import axios from '../../node_modules/axios';
 
 var isDone = false;
 
-function Clubs() {
+function Interests() {
   //  const classArray = ["CS230", "STA199"];
   const [classArray, setAddClass] = useState([]);
 
@@ -32,7 +32,7 @@ function Clubs() {
                     fontFamily: "PingFang SC", width: "75%", margin: "10vh auto"
                 }}
             >
-                <h1>My Clubs</h1>
+                <h1>My Interests</h1>
                 <div class="level mt-6" style={{ width: "100%" }}>
                     {classArray.map(course =>
                         <div class="level-item has-text-centered" style={{ margin: "auto" }}>
@@ -45,4 +45,4 @@ function Clubs() {
     );
 }
 
-export default Clubs;
+export default Interests;
