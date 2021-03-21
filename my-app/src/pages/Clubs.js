@@ -5,12 +5,12 @@ import axios from '../../node_modules/axios';
 
 var isDone = false;
 
-function Classes() {
+function Clubs() {
   //  const classArray = ["CS230", "STA199"];
   const [classArray, setAddClass] = useState([]);
 
     if (!isDone) {
-      axios.get('http://localhost:5000/getclasses')
+      axios.get('http://localhost:5000/getclubs')
           .then(response => {
               console.log(response.data);
               setAddClass(arr => {
@@ -32,7 +32,7 @@ function Classes() {
                     fontFamily: "PingFang SC", width: "75%", margin: "10vh auto"
                 }}
             >
-                <h1>My Classes</h1>
+                <h1>My Clubs</h1>
                 <div class="level mt-6" style={{ width: "100%" }}>
                     {classArray.map(course =>
                         <div class="level-item has-text-centered" style={{ margin: "auto" }}>
@@ -45,4 +45,4 @@ function Classes() {
     );
 }
 
-export default Classes;
+export default Clubs;

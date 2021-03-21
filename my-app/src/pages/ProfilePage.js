@@ -56,7 +56,7 @@ const ProfilePage = () => {
     }
 
     function handleAddClassClick() {
-        axios.get('/setclasses?names='.concat(newClass))
+        axios.get('http://localhost:5000/setclasses?names='.concat(newClass))
             .then(response => {
                 console.log(response.data)
             })
@@ -70,6 +70,12 @@ const ProfilePage = () => {
     }
 
     function handleAddClubClick() {
+      axios.get('http://localhost:5000/setclubs?names='.concat(newClub))
+          .then(response => {
+              console.log(response.data)
+          })
+          .catch(e => console.log(e))
+
         setClubs(arr => {
             arr.push(newClub);
             return arr;
@@ -78,6 +84,12 @@ const ProfilePage = () => {
     }
 
     function handleAddInterestClick() {
+      axios.get('http://localhost:5000/setinterests?names='.concat(newInterest))
+          .then(response => {
+              console.log(response.data)
+          })
+          .catch(e => console.log(e))
+
         setInterests(arr => {
             arr.push(newInterest);
             return arr;
