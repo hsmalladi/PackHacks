@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import havish from "../images/havish.jpeg";
 import styles from "../css/ProfilePage.css";
 import { useHistory } from "react-router-dom";
+import axios from '../../node_modules/axios';
 
 const ProfilePage = () => {
     const history = useHistory();
@@ -55,6 +56,12 @@ const ProfilePage = () => {
     }
 
     function handleAddClassClick() {
+        axios.get('/setclasses?names='.concat(newClass))
+            .then(response => {
+                console.log(response.data)
+            })
+            .catch(e => console.log(e))
+
         setClasses(arr => {
             arr.push(newClass);
             return arr;
