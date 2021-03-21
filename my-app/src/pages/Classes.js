@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect  } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 import ClassBlock from './ClassBlock.js';
 import Navbar from "./Navbar";
 import axios from '../../node_modules/axios';
@@ -6,22 +6,22 @@ import axios from '../../node_modules/axios';
 var isDone = false;
 
 function Classes() {
-  //  const classArray = ["CS230", "STA199"];
-  const [classArray, setAddClass] = useState([]);
+    const classArray = ["CS230", "STA199"];
+    const [addClass, setAddClass] = useState([]);
 
     if (!isDone) {
-      axios.get('http://localhost:5000/getclasses')
-          .then(response => {
-              console.log(response.data);
-              setAddClass(arr => {
-                  arr = response.data;
-                  return arr;
+        axios.get('http://localhost:5000/getclasses')
+            .then(response => {
+                console.log(response.data);
+                setAddClass(arr => {
+                    arr = response.data;
+                    return arr;
 
-              })
-          })
-          .catch(e => console.log(e))
-          isDone = true;
-      }
+                })
+            })
+            .catch(e => console.log(e))
+        isDone = true;
+    }
 
     //const classList = props.map(course => <ClassBlock courseName={course}/>)
     return (

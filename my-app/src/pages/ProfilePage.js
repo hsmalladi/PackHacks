@@ -63,37 +63,38 @@ const ProfilePage = () => {
             .catch(e => console.log(e))
 
         setClasses(arr => {
-            arr.push(newClass);
+            arr.push(newClass)
             return arr;
-
         })
+        setNewClass("");
     }
 
     function handleAddClubClick() {
-      axios.get('http://localhost:5000/setclubs?names='.concat(newClub))
-          .then(response => {
-              console.log(response.data)
-          })
-          .catch(e => console.log(e))
+        axios.get('http://localhost:5000/setclubs?names='.concat(newClub))
+            .then(response => {
+                console.log(response.data)
+            })
+            .catch(e => console.log(e))
 
         setClubs(arr => {
             arr.push(newClub);
             return arr;
         })
-
+        setNewClub("");
     }
 
     function handleAddInterestClick() {
-      axios.get('http://localhost:5000/setinterests?names='.concat(newInterest))
-          .then(response => {
-              console.log(response.data)
-          })
-          .catch(e => console.log(e))
+        axios.get('http://localhost:5000/setinterests?names='.concat(newInterest))
+            .then(response => {
+                console.log(response.data)
+            })
+            .catch(e => console.log(e))
 
         setInterests(arr => {
             arr.push(newInterest);
             return arr;
         })
+        setNewInterest("");
     }
     return (
         <div>
@@ -112,11 +113,11 @@ const ProfilePage = () => {
                         <div class="box" style={{ height: "35vh", width: "80%", fontWeight: "bold" }}>
                             <h5>Your classes</h5>
                             <div>
-                                {classes.length !== 0 ? classes.map(ele => (
+                                {classes.map(ele => (
                                     <div className="mt-2">
                                         {element(ele)}
                                     </div>
-                                )) : <div />}
+                                ))}
                             </div>
                         </div>
                         <div class="button mt-6 has-text-white" onClick={() => handleClassClick()} style={{ width: "120px", fontWeight: "bold", backgroundColor: "#2FBC6A" }}>{showAddClass ? "Exit" : "Add Class"}</div>
@@ -148,13 +149,13 @@ const ProfilePage = () => {
                         <div class="box" style={{ height: "35vh", width: "80%", fontWeight: "bold" }}>
                             <h5>Your clubs</h5>
                             <div>
-                                {clubs.length !== 0 ? clubs.map(ele => (
+                                {clubs.map(ele => (
                                     <div className="mt-2">
                                         {element(
                                             ele
                                         )}
                                     </div>
-                                )) : <div />}
+                                ))}
                             </div>
                         </div>
                         <div class="button mt-6 has-text-white" onClick={() => handleClubClick()} style={{ width: "120px", fontWeight: "bold", backgroundColor: "#2FBC6A" }}>{showAddClub ? "Exit" : "Add Club"}</div>
@@ -186,13 +187,13 @@ const ProfilePage = () => {
                         <div class="box" style={{ height: "35vh", width: "80%", fontWeight: "bold" }}>
                             <h5>Your Interests</h5>
                             <div>
-                                {interests.length !== 0 ? interests.map(ele => (
+                                {interests.map(ele => (
                                     <div className="mt-2">
                                         {element(
                                             ele
                                         )}
                                     </div>
-                                )) : <div />}
+                                ))}
                             </div>
                         </div>
                         <div class="button mt-6 has-text-white" onClick={() => handleInterestClick()} style={{ width: "120px", fontWeight: "bold", backgroundColor: "#2FBC6A" }}>{showAddInterest ? "Exit" : "Add Interest"}</div>
