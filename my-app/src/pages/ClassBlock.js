@@ -9,10 +9,22 @@ function ClassBlock(props) {
     //const peopleList = ["Bryan Pan", "Minjun Kwak", "Harry Wang", "Shawn Lee", "Nirvan Silswall", "Bald Ma"];
 
     const [show, setShow] = useState(false);
+    const [showClick, setShowClick] = useState(false);
 
     function handleClick() {
         setShow(!show);
+        setShowClick(false);
     }
+
+    function handleShowClick() {
+        if (show) {
+            return null;
+        }
+        else {
+            setShowClick(true);
+        }
+    }
+
 
     const peopleList = [
         {
@@ -65,7 +77,8 @@ function ClassBlock(props) {
             {/*{personOne.name}
             <a href={personOne.insta}> <img width="60" height="60" src={ins} /></a>
             <a href={personOne.face}> <img width="60" height="60" src={fb} /></a>*/}
-            <div class="button has-text-white has-text-weight-bold pl-6 pr-6" onClick={() => handleClick()} style={{ backgroundColor: "#2FBC6A" }}>
+            <div style={{ position: "absolute", marginTop: "-20vh" }}>{showClick ? "Click to see who's in your classes!" : ""}</div>
+            <div class="button has-text-white has-text-weight-bold pl-6 pr-6" onMouseEnter={() => handleShowClick()} onMouseLeave={() => setShowClick(false)} onClick={() => handleClick()} style={{ backgroundColor: "#2FBC6A", position: "relative" }}>
                 <span>{show ? "Close" : props.courseName}</span>
             </div>
             <div>
