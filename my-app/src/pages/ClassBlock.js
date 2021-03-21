@@ -65,7 +65,7 @@ function ClassBlock(props) {
             {/*{personOne.name}
             <a href={personOne.insta}> <img width="60" height="60" src={ins} /></a>
             <a href={personOne.face}> <img width="60" height="60" src={fb} /></a>*/}
-            <div class="button has-text-white has-text-weight-bold" onClick={() => handleClick()} style={{ backgroundColor: "#2FBC6A", width: "10vw" }}>
+            <div class="button has-text-white has-text-weight-bold pl-6 pr-6" onClick={() => handleClick()} style={{ backgroundColor: "#2FBC6A" }}>
                 <span>{show ? "Close" : props.courseName}</span>
             </div>
             <div>
