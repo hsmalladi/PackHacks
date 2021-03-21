@@ -18,11 +18,6 @@ function NavBar() {
           <Nav.Link href="/classes" style={{ fontWeight: "bold", fontSize: "20px" }}>Classes</Nav.Link>
           <Nav.Link href="/clubs" style={{ fontWeight: "bold", fontSize: "20px" }}>Clubs</Nav.Link>
           <Nav.Link href="/interests" style={{ fontWeight: "bold", fontSize: "20px" }}>Interests</Nav.Link>
-
-          {/*<a class="dropdown-toggle nav-link" href="/home#" id="dropdown-basic" role="button" aria-haspopup=
-              "true" aria-expanded="false">
-              <img src={havish} width="40" height="40" class="rounded-circle" />
-            </a>*/}
           <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic" role="button" aria-haspopup=
               "true" aria-expanded="false">
