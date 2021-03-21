@@ -34,7 +34,9 @@ const LoginPage = () => {
 
     return (
         <div class="container" style={{ fontFamily: "PingFang SC" }}>
-            <img src={image} alt="logo" />
+            <div style={{ marginLeft: "-40px", marginTop: "-8px", marginBottom: "40px" }}>
+                <img src={image} alt="logo" width="9%" height="9%" />
+            </div>
             <div class="box" style={{ width: "70vh", height: "55vh", margin: "auto" }}>
                 <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center pt-6 pb-6">
                     <h4 class="has-text-weight-bold is-size-3" style={{ marginTop: "-20px", color: "#2FBC6A" }}>Log in to atrium</h4>

@@ -1,5 +1,5 @@
 import React from 'react'
-import image from "../images/greenlogo.png";
+import image from "../images/whitelogo.png";
 import havish from '../images/havish.jpeg';
 //import * as ReactBootStrap from 'react-bootstrap'
 
@@ -11,13 +11,15 @@ import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="color-nav" style={{ fontFamily: "PingFang SC" }}>
-      <Navbar.Brand href='/'>atrium</Navbar.Brand>
+      <Navbar.Brand href='/home'>
+        <img src={image} alt="logo" width="40%" height="40%" margin="0" />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="/classes" style={{ fontWeight: "bold", fontSize: "20px" }}>Classes</Nav.Link>
-          <Nav.Link href="/clubs" style={{ fontWeight: "bold", fontSize: "20px" }}>Clubs</Nav.Link>
-          <Nav.Link href="/interests" style={{ fontWeight: "bold", fontSize: "20px" }}>Interests</Nav.Link>
+          <Nav.Link href="/classes" style={{ fontWeight: "bold", fontSize: "22px" }}>Classes</Nav.Link>
+          <Nav.Link href="/clubs" style={{ fontWeight: "bold", fontSize: "22px" }}>Clubs</Nav.Link>
+          <Nav.Link href="/interests" style={{ fontWeight: "bold", fontSize: "22px", marginRight: "15px" }}>Interests</Nav.Link>
           <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic" role="button" aria-haspopup=
               "true" aria-expanded="false">
@@ -36,12 +38,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-
-/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-          </NavDropdown> */
